@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  </br>
+  <h2>WEB322 User( {{session.user.userName}} )History</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Login Date/Time</th>
+        <th scope="col">Client Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each session.user.loginHistory}}
+      <tr>
+        <td>{{dateTime}}</td>
+        <td>{{userAgent}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+      <a href="/logout" class="btn btn-danger">Logout</a>
+
+</div>
