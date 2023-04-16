@@ -24,7 +24,7 @@ module.exports.initialize = function ()
 {
     return new Promise(function (resolve, reject) 
     {
-        let db = mongoose.createConnection("mongodb+srv://rahiraolji:mCwThpi6pyiceuC3@senecaweb.u2k5unl.mongodb.net/web322_week8");
+        let db = mongoose.createConnection("mongodb+srv://rahiraolji:MyMongoDB@senecaweb.u2k5unl.mongodb.net/?retryWrites=true&w=majority");
         db.on('error', (err)=>
         {
             reject(err); // reject the promise with the provided error
